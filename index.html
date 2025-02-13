@@ -78,27 +78,47 @@
             border-radius: 5px;
         }
         .cta {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .cta button {
-            background: #27ae60;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: 0.3s;
-            padding: 15px 20px;
-        }
-        .cta button a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-        }
-        .cta button:hover {
-            background: #219150;
-        }
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta button {
+    background: #27ae60;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 1.5s infinite alternate; /* Animação de pulsação */
+}
+
+.cta button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.cta button:hover {
+    background: #219150;
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(39, 174, 96, 0.7);
+    }
+}
+
 
         .signature {
             font-family: 'Dancing Script', cursive;
